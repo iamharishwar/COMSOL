@@ -19,7 +19,7 @@ escp                    -------------to stop writing in the editor, it will stop
 :q!                     --------------exit without modifing
 
   
-HOW TO OPEDRATE AZUR CLOUD
+HOW TO OPERATE AZUR CLOUD
 please  follow the following steps
   
 eval $(ssh-agent)                   -----------------  it will create key to access the cloud
