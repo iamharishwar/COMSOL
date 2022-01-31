@@ -1,0 +1,33 @@
+openFOAM HAVE 3 FOLDERS AS FOLLOWS
+
+1)  0                                 field directory , all constants like velocity pressure, temperature is declared
+2)  constants                         mesh detaisl, thermalproperties, fluid properties, generally properties folder, also mesh details
+3)  system                            details ragarding solution timing, iterations number are specified
+4)  postprocessing                    it will be created generally after the simulation is done      
+5)  log                               it will have the details of all the iterations
+
+3) system
+  i)   controlDict                    in this file we have all the details of simulation time, iterations number 
+  ii)  fvSchemes                      The file is responsible for type of flow like steady otr transient, also order of flow like first or second order
+  iii) sampling file                  This file is responsible for all the results we will see in paraview for post processing, EVERYTHING SHOULD BE MENTIONED IN this file for example
+                                      results at which locations; explain plane cuts 
+  iv) decomposeParDict                it has details of number of domains, also method used
+  v)  fvSolution                      it as details of the solvers used 
+  vi) log                             log file is created after every simulation
+  
+  
+  
+  ------------------------------------------------------------THERE ARE MANY SOLVERS IN openFOAM-----------------------------------------------
+  
+  type "sol" in terminal  and type enter then "ls" it will display all the solvers in openFOAM depending on the project the solver is choosen
+  
+ TO RUN THE PROJECT , ENTER INTO THE PROJECT FOLDER AND THEN type the name of solver
+ 
+ for example  "rhoSimpleFoam log > $"         it will create log file and also it will run in backend with the command "> $" added in it
+               "tail -f log"                  it will take you to backend where simulation is running
+               
+  
+  
+  
+  
+  
