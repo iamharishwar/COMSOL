@@ -1,4 +1,5 @@
-TO USE OPENFOAM WE NEED TO UNDERSTAND HOW TO USE EDITOR VI:
+TO USE OPENFOAM WE NEED TO UNDERSTAND HOW TO USE EDITOR VI
+
 Here are few commands which are most popularly used in openfoam
 
 To download openfoam in your personal computer , download openfoam from official website www.openfoam.com
