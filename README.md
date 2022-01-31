@@ -26,4 +26,3 @@ eval $(ssh-agent)                   -----------------  it will create key to acc
   
 ssh-add ~/.ssh/<name of pem file>   ------------------ it will let you enter into azur cloud, pem file is created when we create a virtual machine in azur cloud
 ssh <user name>@<ip_address>        ------------------ it will login into virtualmachine
-
