@@ -23,7 +23,7 @@ openFOAM HAVE 3 FOLDERS AS FOLLOWS
   
  TO RUN THE PROJECT , ENTER INTO THE PROJECT FOLDER AND THEN type the name of solver
  
- for example  "rhoSimpleFoam log > $"         it will create log file and also it will run in backend with the command "> $" added in it
+ for example  "rhoSimpleFoam > log &"         it will create log file and also it will run in backend with the command "> &" added in it
                "tail -f log"                  it will take you to backend where simulation is running
                
   
