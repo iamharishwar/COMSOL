@@ -25,4 +25,8 @@ please  follow the following steps
 eval $(ssh-agent)                   ----------------- it will create key to access the cloud
   
 ssh-add ~/.ssh/<name of pem file>   ------------------ it will let you enter into azur cloud, pem file is created when we create a virtual machine in azur cloud
+  
+tar xvf <.tar file name. >         ------------------- it will unzip all the tar files
+
+scp -r rhoSimpleFoam.tar.bz2 azuuser@51.103.32.219:/home/azuuser ----------------to transfer data from local pc to azur cloud server machine
 
