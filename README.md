@@ -29,4 +29,7 @@ ssh-add ~/.ssh/<name of pem file>   ------------------ it will let you enter int
 tar xvf <.tar file name. >         ------------------- it will unzip all the tar files
 
 scp -r rhoSimpleFoam.tar.bz2 azuuser@51.103.32.219:/home/azuuser ----------------to transfer data from local pc to azur cloud server machine
+  
+scp -r files1.tar.bz2 azuuser@51.103.37.27:/home/azuuser/insulatio---------------- same as above
+
 
