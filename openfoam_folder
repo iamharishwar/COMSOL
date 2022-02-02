@@ -26,6 +26,7 @@ openFOAM HAVE 3 FOLDERS AS FOLLOWS
  for example  "rhoSimpleFoam log > $"         it will create log file and also it will run in backend with the command "> $" added in it
                "tail -f log"                  it will take you to backend where simulation is running
                
+               
   
   
   
