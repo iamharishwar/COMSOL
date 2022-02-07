@@ -28,7 +28,7 @@ openFOAM HAVE 3 FOLDERS AS FOLLOWS
                
  mpiexec.exe -np 16 snappyHexMesh -parallel > log &        it will execute the snappyhexa mesh with 16 processor in pc with parallel computing
  
- mpiexec.exe -n 2 simpleFoam -parallel        
+ mpiexec.exe -n 2 simpleFoam -parallel                    command to run solver 
  
  foam                                                      it will take you to the library of openfoam, just type in terminal and following below steps
  
@@ -36,12 +36,8 @@ openFOAM HAVE 3 FOLDERS AS FOLLOWS
  
  foamCleanTutorials
  
- blockMesh.exe   
- 
- ./Allrun
- 
- ./Allclean                                 i
-               
+ blockMesh.exe                                it is openfoam application to build base mesh ( block mesh ) using blockmeshdict dictionary already available in system directory
+                
  decomposePar.exe      
  
  vi system/decomposeParDict                   It will show you the number of subdomains whihc is n.o of processors in you local pc.
@@ -49,25 +45,15 @@ openFOAM HAVE 3 FOLDERS AS FOLLOWS
  cat /proc/cpuinfo                            It will show you the number of processor in your pc 
  
  which simpleFoam
-  
- cat Allrun
-   
- echo $WM_MPLIB
+                                    
+      
+ which mpiexec                                 to show where it is , location
  
- ./Allclean
- 
- echo $WM_COMPILER
-  
- echo $WM_COMPILER_TYPE
-  
- pacman -S flex
- 
- pacman -Ss mpi
-   
- which mpiexec
- 
- rm -rf processor*
+ rm -rf processor*                             remove all processors 
 
+ reconstructParMesh.exe -latestTime           it will collect the mesh from all the processors and keep outside  ( user can see what are thge boubdaries like castelling, snap, add layers)
+ 
+ 
   
   
 
