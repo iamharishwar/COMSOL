@@ -23,14 +23,16 @@ openFOAM HAVE 3 FOLDERS AS FOLLOWS
   
  TO RUN THE PROJECT , ENTER INTO THE PROJECT FOLDER AND THEN type the name of solver
  
- for example  "rhoSimpleFoam log > &"         it will create log file and also it will run in backend with the command "> &" added in it
-               "tail -f log"                  it will take you to backend where simulation is running
+ for example  "rhoSimpleFoam log > &"                      it will create log file and also it will run in backend with the command "> &" added in it
+               "tail -f log"                               it will take you to backend where simulation is running
                
- mpiexec.exe -np 16 snappyHexMesh -parallel > log &    it will execute the snappyhexa mesh with 16 processor in pc with parallel computing
+ mpiexec.exe -np 16 snappyHexMesh -parallel > log &        it will execute the snappyhexa mesh with 16 processor in pc with parallel computing
  
- foam                                         it will take you to the library of openfoam, just type in terminal and following below steps
+ mpiexec.exe -n 2 simpleFoam -parallel        
  
- cd tutorials                                it will show u all the  solvers
+ foam                                                      it will take you to the library of openfoam, just type in terminal and following below steps
+ 
+ cd tutorials                                              it will show u all the  solvers
  
  foamCleanTutorials
  
@@ -46,7 +48,7 @@ openFOAM HAVE 3 FOLDERS AS FOLLOWS
  
  cat /proc/cpuinfo                            It will show you the number of processor in your pc 
  
-  which simpleFoam
+ which simpleFoam
   
  cat Allrun
    
@@ -54,14 +56,17 @@ openFOAM HAVE 3 FOLDERS AS FOLLOWS
  
  ./Allclean
  
-  echo $WM_COMPILER
+ echo $WM_COMPILER
   
-  echo $WM_COMPILER_TYPE
+ echo $WM_COMPILER_TYPE
   
-   pacman -S flex
-   pacman -Ss mpi
+ pacman -S flex
+ 
+ pacman -Ss mpi
    
-   which mpiexec
+ which mpiexec
+ 
+ rm -rf processor*
 
   
   
