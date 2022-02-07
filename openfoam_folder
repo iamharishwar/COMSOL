@@ -23,8 +23,50 @@ openFOAM HAVE 3 FOLDERS AS FOLLOWS
   
  TO RUN THE PROJECT , ENTER INTO THE PROJECT FOLDER AND THEN type the name of solver
  
- for example  "rhoSimpleFoam log > $"         it will create log file and also it will run in backend with the command "> $" added in it
+ for example  "rhoSimpleFoam log > &"         it will create log file and also it will run in backend with the command "> &" added in it
                "tail -f log"                  it will take you to backend where simulation is running
+               
+ mpiexec.exe -np 16 snappyHexMesh -parallel > log &    it will execute the snappyhexa mesh with 16 processor in pc with parallel computing
+ 
+ foam                                         it will take you to the library of openfoam, just type in terminal and following below steps
+ 
+ cd tutorials                                it will show u all the  solvers
+ 
+ foamCleanTutorials
+ 
+ blockMesh.exe   
+ 
+ ./Allrun
+ 
+ ./Allclean                                 i
+               
+ decomposePar.exe      
+ 
+ vi system/decomposeParDict                   It will show you the number of subdomains whihc is n.o of processors in you local pc.
+ 
+ cat /proc/cpuinfo                            It will show you the number of processor in your pc 
+ 
+  which simpleFoam
+  
+ cat Allrun
+   
+ echo $WM_MPLIB
+ 
+ ./Allclean
+ 
+  echo $WM_COMPILER
+  
+  echo $WM_COMPILER_TYPE
+  
+   pacman -S flex
+   pacman -Ss mpi
+   
+   which mpiexec
+
+  
+  
+
+
                
                
   
