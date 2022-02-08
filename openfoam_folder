@@ -53,12 +53,14 @@ openFOAM HAVE 3 FOLDERS AS FOLLOWS
 
  reconstructParMesh.exe -latestTime           it will collect the mesh from all the processors and keep outside  ( user can see what are thge boubdaries like castelling, snap, add layers)
  
- 
+ splitMeshRegions.exe -cellZones -overwrite
   
-  
+ splitMeshRegions.exe -cellZones
 
+ reconstructParMesh.exe -time 2
 
-               
+  cp ../OpenFOAM_PIPE/0 . -R
+              
                
   
   
